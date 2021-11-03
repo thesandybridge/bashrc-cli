@@ -4,14 +4,15 @@
   "description": "CLI tool to add aliases to .bashrc for linux users.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node index.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "chalk": "^4.1.2",
     "commander": "^8.3.0",
-    "conf": "^10.0.3"
+    "conf": "^10.0.3",
+    "inquirer": "^8.2.0"
   },
   "bin": {
     "bash-alias": "index.js"
