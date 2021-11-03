@@ -1,0 +1,34 @@
+# Global Variables
+alias serve-php="php artisan serve"
+alias serve-ng="ng s --o"
+alias react="npx create-react-app"
+alias nextjs="npx create-next-app"
+# alias bashrc="nano ~/.bashrc"
+
+# Functions
+# use these to define aliases with custom options
+##############################
+dev() {
+  local OPTIND path
+  while getopts ":p" option; do
+    case $option in
+      p) path=/projects ;;
+      ?) echo "invalid option: $OPTARG"; return 1 ;;
+    esac
+  done
+  cd ~/Dev${path}
+}
+# use for above: dev -p --> cd ~/Dev/projects
+bashrc() {
+  local OPTIND editor
+  while getopts ":cnvg" option; do
+    case $option in
+      c) editor=code ;;
+      n) editor=nano ;;
+      v) editor=vim ;;
+      g) editor=gedit ;;
+      ?) echo "invalid editor: $OPTARG"; return 1 ;;
+    esac
+  done
+  ${editor} ~/.bashrc
+}
