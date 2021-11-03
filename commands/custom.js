@@ -3,7 +3,7 @@ const fs = require('fs')
 const p = require('path')
 const homedir = require('os').homedir();
 
-function createCustomFunction (name, [flags], path=homedir, [value]) {
+function createCustomFunction (name, flags, path, value) {
     const output = `\n${name}() {
   local OPTIND ${name}
   while getopts ":${flags}" option; do

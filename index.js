@@ -35,7 +35,7 @@ inquirer
                         alias(secondPrompt.aliasName, secondPrompt.aliasCommand)
         }) 
 
-    } else (answers.config === 'shortcut') 
+    } else if (answers.config === 'shortcut') 
     {
         inquirer.prompt([
                 {
