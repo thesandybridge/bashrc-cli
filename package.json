@@ -12,7 +12,7 @@
     "chalk": "^4.1.2",
     "commander": "^8.3.0",
     "conf": "^10.0.3",
-    "inquirer": "^8.2.0"
+    "inquirer": "^8.2.2"
   },
   "bin": {
     "bash-alias": "index.js"
